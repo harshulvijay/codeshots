@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "npx eslint",
     "serve": "vite preview"
   },
   "dependencies": {
