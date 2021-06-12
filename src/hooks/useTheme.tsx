@@ -145,7 +145,7 @@ export const useTheme = <T extends object>(
         // fetch the theme from `themesCacheRef`
         // use `{}` if `themesCacheRef` isn't defined
         const cachedTheme: T = themesCacheRef.current
-          ? await themesCacheRef.current[state.meta.name]
+          ? (await themesCacheRef.current)[state.meta.name] ?? {}
           : {}
         // determine if we have to fetch the theme using an XHR request
         const fetchThemeFromNetwork =
